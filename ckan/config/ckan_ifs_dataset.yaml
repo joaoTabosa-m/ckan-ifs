@@ -1,0 +1,465 @@
+scheming_version: 2
+dataset_type: dataset
+about: Ckan IFS Extrafields
+about_url: http://github.com/ckan/ckanext-scheming
+
+
+dataset_fields:
+
+- field_name: title
+  label: Titulo
+  preset: title
+  form_placeholder: Titulo
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  form_placeholder: ex. dataset-ifs
+
+- field_name: notes
+  label: Descrição
+  form_snippet: markdown.html
+  form_placeholder: Descrição detalhada
+
+- field_name: tag_string
+  label: Tags
+  preset: tag_string_autocomplete
+  form_placeholder: ex. economia, saúde, governo
+
+- field_name: license_id
+  label: License
+  form_snippet: license.html
+  help_text: Tipos de licença e informações adicionais podem ser encontradas em http://opendefinition.org/
+
+- field_name: owner_org
+  label: Organização
+  preset: dataset_organization
+
+- field_name: url
+  label: Catálogo de Origem
+  form_placeholder: http://example.com/dataset.json
+  display_property: foaf:homepage
+  display_snippet: link.html
+
+# - field_name: version
+#   label: Versão
+#   validators: ignore_missing unicode_safe package_version_validator
+#   form_placeholder: '1.0'
+
+- field_name: author
+  label: Autor
+  form_placeholder: Ygor Rocha
+  display_property: dc:creator
+
+- field_name: author_email
+  label: Email do Autor
+  form_placeholder: ygor.rocha@email.com
+  display_property: dc:creator
+  display_snippet: email.html
+  display_email_name_field: author
+
+- field_name: maintainer
+  label: Mantenedor
+  form_placeholder: Ygor Rocha
+  display_property: dc:contributor
+
+- field_name: area_conhecimento
+  label: Área do conhecimento
+  form_placeholder: Área do conhecimento
+  preset: select
+  choices:
+  - value: Matemática
+    label: Matemática
+  - value: Probabilidade e Estatística
+    label: Probabilidade e Estatística
+  - value: Ciência da Computação
+    label: Ciência da Computação
+  - value: Astronomia
+    label: Astronomia
+  - value: Física
+    label: Física
+  - value: Química
+    label: Química
+  - value: Geociências
+    label: Geociências
+  - value: Oceanografia
+    label: Oceanografia
+  - value: Biologia Geral
+    label: Biologia Geral
+  - value: Genética
+    label: Genética
+  - value: Botânica
+    label: Botânica
+  - value: Zoologia
+    label: Zoologia
+  - value: Ecologia
+    label: Ecologia
+  - value: Morfologia
+    label: Morfologia
+  - value: Fisiologia
+    label: Fisiologia
+  - value: Bioquímica
+    label: Bioquímica
+  - value: Biofísica
+    label: Biofísica
+  - value: Farmacologia
+    label: Farmacologia
+  - value: Imunologia
+    label: Imunologia
+  - value: Microbiologia
+    label: Microbiologia
+  - value: Parasitologia
+    label: Parasitologia
+  - value: Engenharia Civil
+    label: Engenharia Civil
+  - value: Engenharia de Minas
+    label: Engenharia de Minas
+  - value: Engenharia de Materiais e Metalúrgica
+    label: Engenharia de Materiais e Metalúrgica
+  - value: Engenharia Elétrica
+    label: Engenharia Elétrica
+  - value: Engenharia Mecânica
+    label: Engenharia Mecânica
+  - value: Engenharia Química
+    label: Engenharia Química
+  - value: Engenharia Sanitária
+    label: Engenharia Sanitária
+  - value: Engenharia de Produção
+    label: Engenharia de Produção
+  - value: Engenharia Nuclear
+    label: Engenharia Nuclear
+  - value: Engenharia de Transportes
+    label: Engenharia de Transportes
+  - value: Engenharia Naval
+    label: Engenharia Naval
+  - value: Engenharia Oceânica
+    label: Engenharia Oceânica
+  - value: Engenharia Aeroespacial
+    label: Engenharia Aeroespacial
+  - value: Engenharia Biomédica
+    label: Engenharia Biomédica
+  - value: Medicina
+    label: Medicina
+  - value: Odontologia
+    label: Odontologia
+  - value: Farmácia
+    label: Farmácia
+  - value: Enfermagem
+    label: Enfermagem
+  - value: Nutrição
+    label: Nutrição
+  - value: Saúde Coletiva
+    label: Saúde Coletiva
+  - value: Fonoaudiologia
+    label: Fonoaudiologia
+  - value: Fisioterapia e Terapia Ocupacional
+    label: Fisioterapia e Terapia Ocupacional
+  - value: Educação Física
+    label: Educação Física
+  - value: Agronomia
+    label: Agronomia
+  - value: Ciências Florestais e Engenharia Florestal
+    label: Ciências Florestais e Engenharia Florestal
+  - value: Engenharia Agrícola
+    label: Engenharia Agrícola
+  - value: Zootecnia
+    label: Zootecnia
+  - value: Medicina Veterinária
+    label: Medicina Veterinária
+  - value: Recursos Pesqueiros e Engenharia de Pesca
+    label: Recursos Pesqueiros e Engenharia de Pesca
+  - value: Ciência e Tecnologia de Alimentos
+    label: Ciência e Tecnologia de Alimentos
+  - value: Ciências Sociais Aplicadas
+    label: Ciências Sociais Aplicadas
+  - value: Direito
+    label: Direito
+  - value: Administração
+    label: Administração
+  - value: Economia
+    label: Economia
+  - value: Arquitetura e Urbanismo
+    label: Arquitetura e Urbanismo
+  - value: Planejamento Urbano e Regional
+    label: Planejamento Urbano e Regional
+  - value: Demografia
+    label: Demografia
+  - value: Ciência de Informação
+    label: Ciência de Informação
+  - value: Museologia
+    label: Museologia
+  - value: Comunicação
+    label: Comunicação
+  - value: Serviço Social
+    label: Serviço Social
+  - value: Economia Doméstica
+    label: Economia Doméstica
+  - value: Serviço Social
+    label: Serviço Social
+  - value: Ciências Humanas
+    label: Ciências Humanas
+  - value: Filosofia
+    label: Filosofia
+  - value: Sociologia
+    label: Sociologia
+  - value: Antropologia
+    label: Antropologia
+  - value: Arqueologia
+    label: Arqueologia
+  - value: História
+    label: História
+  - value: Geografia
+    label: Geografia
+  - value: Psicologia
+    label: Psicologia
+  - value: Educação
+    label: Educação
+  - value: CIência Política
+    label: CIência Política
+  - value: Teologia
+    label: Teologia
+  - value: Linguística, Letras e Arte
+    label: Linguística, Letras e Arte
+  - value: Linguística
+    label: Linguística
+  - value: Letras
+    label: Letras
+  - value: Arte
+    label: Arte
+
+
+- field_name: campus
+  label: Campus
+  form_placeholder: Campus
+  preset: select
+  choices:
+  - value: Aracaju
+    label: Aracaju
+  - value: Estância
+    label: Estância
+  - value: Glória
+    label: Glória
+  - value: Itabaiana
+    label: Itabaiana
+  - value: Lagarto
+    label: Lagarto
+  - value: Poço Redondo
+    label: Poço Redondo
+  - value: Propriá
+    label: Propriá
+  - value: São Cristóvão
+    label: São Cristóvão
+  - value: Socorro
+    label: Socorro
+  - value: Tobias Barreto
+    label: Tobias Barreto
+
+- field_name: curso
+  label: Curso  
+  form_placeholder: Curso
+  preset: select
+  choices:
+  - value: Aracaju - Alimentos
+    label: Aracaju - Alimentos
+  - value: Aracaju - Edificações
+    label: Aracaju - Edificações
+  - value: Aracaju - Eletrônica
+    label: Aracaju - Eletrônica
+  - value: Aracaju - Eletrotécnica
+    label: Aracaju - Eletrotécnica
+  - value: Aracaju - Informática
+    label: Aracaju - Informática
+  - value: Aracaju - Química
+    label: Aracaju - Química
+  - value: Estância - Edificações
+    label: Estância - Edificações
+  - value: Estância - Eletrotécnica
+    label: Estância - Eletrotécnica
+  - value: Estância - Sistemas de Energias Renováveis
+    label: Estância - Sistemas de Energias Renováveis
+  - value: Glória - Agropecuária
+    label: Glória - Agropecuária
+  - value: Glória - Alimentos
+    label: Glória - Alimentos
+  - value: Itabaiana - Agronegócio
+    label: Itabaiana - Agronegócio
+  - value: Itabaiana - Manutenção e Suporte em Informática
+    label: Itabaiana - Manutenção e Suporte em Informática
+  - value: Lagarto - Automação
+    label: Lagarto - Automação
+  - value: Lagarto - Edificações
+    label: Lagarto - Edificações
+  - value: Lagarto - Eletromecânica
+    label: Lagarto - Eletromecânica
+  - value: Lagarto - Rede de Computadores    
+    label: Lagarto - Rede de Computadores    
+  - value: São Cristóvão - Agroindústria
+    label: São Cristóvão - Agroindústria
+  - value: São Cristóvão - Agropecuária
+    label: São Cristóvão - Agropecuária
+  - value: São Cristóvão - Aquicultura
+    label: São Cristóvão - Aquicultura
+  - value: São Cristóvão - Manutenção e Suporte em Informática
+    label: São Cristóvão - Manutenção e Suporte em Informática
+  - value: Socorro - Manutenção e Suporte em Informática
+    label: Socorro - Manutenção e Suporte em Informática
+  - value: Socorro - Sistemas de Energias Renováveis
+    label: Socorro - Sistemas de Energias Renováveis
+  - value: Tobias Barreto - Administração
+    label: Tobias Barreto - Administração
+
+- field_name: tipo_componente
+  label: Eixo tecnológico
+  form_placeholder: Eixo tecnológico
+  preset: select
+  choices:
+  - value: Ambiente e Saúde
+    label: Ambiente e Saúde
+  - value: Controle e Processos Industriais
+    label: Controle e Processos Industriais
+  - value: Desenvolvimento Educacional e Social
+    label: Desenvolvimento Educacional e Social
+  - value: Gestão e Negócios
+    label: Gestão e Negócios
+  - value: Informação e Comunicação
+    label: Informação e Comunicação
+  - value: Infraestrutura
+    label: Infraestrutura
+  - value: Militar
+    label: Militar
+  - value: Produção Alimentícia
+    label: Produção Alimentícia
+  - value: Produção Cultural e Design
+    label: Produção Cultural e Design
+  - value: Produção Industrial
+    label: Produção Industrial
+  - value: Recursos Naturais
+    label: Recursos Naturais
+  - value: Segurança
+    label: Segurança
+  - value: Turismo, Hospitalidade e Lazer
+    label: Turismo, Hospitalidade e Lazer
+
+
+- field_name: disciplinas
+  label: Disciplinas envolvidas
+  preset: tag_string_autocomplete
+  form_placeholder: Disciplinas envolvidas
+
+- field_name: apl
+  label: APL
+  form_placeholder: APL
+  preset: select
+  choices:
+  - value: Apicultura Sergipana
+    label: Apicultura Sergipana
+  - value: Artefatos de Madeira e Móveis Sergipano
+    label: Artefatos de Madeira e Móveis Sergipano
+  - value: Artesanato de Cerâmica de Santana Do São Francisco
+    label: Artesanato de Cerâmica de Santana Do São Francisco
+  - value: Batata Doce do Território Agreste das Serras Sergipanas
+    label: Batata Doce do Território Agreste das Serras Sergipanas
+  - value: Bovinocultura de Leite do Território Baixo São Francisco, Médio e Alto Sertão Sergipano
+    label: Bovinocultura de Leite do Território Baixo São Francisco, Médio e Alto Sertão Sergipano
+  - value: Carcinicultura do Território Leste Baixo São Francisco Sergipano
+    label: Carcinicultura do Território Leste Baixo São Francisco Sergipano
+  - value: Cerâmica Vermelha Sergipana
+    label: Cerâmica Vermelha Sergipana
+  - value: Confecções e Artesanato de Bordados do Sul e Centro-Sul Sergipano
+    label: Confecções e Artesanato de Bordados do Sul e Centro-Sul Sergipano
+  - value: Cultura do Município De Laranjeiras 
+    label: Cultura do Município De Laranjeiras 
+  - value: Cultura do Município De São Cristóvão
+    label: Cultura do Município De São Cristóvão
+  - value: Energias Renováveis
+    label: Energias Renováveis
+  - value: Fruticultura Mangaba Sergipana
+    label: Fruticultura Mangaba Sergipana
+  - value: Laranja do Território Sul Sergipano
+    label: Laranja do Território Sul Sergipano
+  - value: Mandiocultura do Território Agreste Ocidental e Centro-Sul Sergipano
+    label: Mandiocultura do Território Agreste Ocidental e Centro-Sul Sergipano
+  - value: Milho do Território Sertão Ocidental Sergipano
+    label: Milho do Território Sertão Ocidental Sergipano
+  - value: Milho do Território Agreste Vale do Cotinguiba
+    label: Milho do Território Agreste Vale do Cotinguiba
+  - value: Ovinocaprinocultura de Sergipe
+    label: Ovinocaprinocultura de Sergipe
+  - value: Pecuária de Leite e Derivados do Alto Sertão Sergipano
+    label: Pecuária de Leite e Derivados do Alto Sertão Sergipano
+  - value: Piscicultura do Baixo São Francisco Sergipe
+    label: Piscicultura do Baixo São Francisco Sergipe
+  - value: Rede Petróleo e gás de Sergipe
+    label: Rede Petróleo e gás de Sergipe
+  - value: Rizicultura Sergipana
+    label: Rizicultura Sergipana
+  - value: Tecnologia da Informação da Grande Aracaju
+    label: Tecnologia da Informação da Grande Aracaju
+
+- field_name: fator_inovacao
+  label: Fator de inovação
+  form_placeholder: Fator de inovação  
+  preset: select
+  choices:  
+  - value: Assistência Técnica
+    label: Assistência Técnica
+  - value: Atração de Investimentos
+    label: Atração de Investimentos
+  - value: Capacitação tecnológica
+    label: Capacitação tecnológica
+  - value: Diagnóstico Produtivo
+    label: Diagnóstico Produtivo
+  - value: Disseminação de Informações
+    label: Disseminação de Informações
+  - value: Difusão de Tecnologia
+    label: Difusão de Tecnologia
+  - value: Estudos e Pesquisas
+    label: Estudos e Pesquisas
+  - value: Extensionismo industrial
+    label: Extensionismo industrial
+  - value: Extensionismo Rural
+    label: Extensionismo Rural
+  - value: Formalização e Legalização
+    label: Formalização e Legalização
+  - value: Indicação geográfica
+    label: Indicação geográfica
+  - value: Governança e Gestão
+    label: Governança e Gestão
+  - value: Incubação de Empresas e/ou Startups
+    label: Incubação de Empresas e/ou Startups
+  - value: Legislação e regulamentação
+    label: Legislação e regulamentação
+  - value: Formação em Associativismo e Cooperativismo
+    label: Formação em Associativismo e Cooperativismo
+  - value: Pesquisa e desenvolvimento de produtos e processos
+    label: Pesquisa e desenvolvimento de produtos e processos
+  - value: Plano de Negócios e Consultoria
+    label: Plano de Negócios e Consultoria
+  - value: Programa de recuperação de áreas degradadas
+    label: Programa de recuperação de áreas degradadas
+  - value: Projetos de viabilidade
+    label: Projetos de viabilidade
+  - value: Registro de patente
+    label: Registro de patente
+  - value: Registro de software
+    label: Registro de software
+
+
+resource_fields:
+
+- field_name: url
+  label: URL
+  preset: resource_url_upload
+
+- field_name: name
+  label: Nome
+  form_placeholder: ex. TCC 12/2023
+
+- field_name: description
+  label: Descrição
+  form_snippet: markdown.html
+  form_placeholder: Descrição detalhada
+
+- field_name: format
+  label: Formato
+  preset: resource_format_autocomplete
